@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+aws_credentials.txt
+data/videos/
+data/audio/
+data/transcriptions/
+data/normalized_transcriptions/
+data/key_phrases_and_topics/
+.DS_Store
