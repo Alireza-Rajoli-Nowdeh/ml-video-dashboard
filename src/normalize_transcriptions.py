@@ -12,7 +12,7 @@ nltk.download("stopwords")
 nltk.download("wordnet")
 
 s3 = boto3.client("s3")
-BUCKET = "alireza-rajoli-nowdeh-project"
+BUCKET = "YOUR_S3_BUCKET_NAME"
 
 TRANS_PREFIX = "output/transcriptions/"
 NORM_PREFIX = "output/normalized_transcriptions/"
