@@ -3,7 +3,7 @@ import boto3
 import pandas as pd
 import os
 
-BUCKET = "alireza-rajoli-nowdeh-project"
+BUCKET = "YOUR_S3_BUCKET_NAME"
 CSV_KEY = "output/key_phrases_and_topics.csv"
 
 s3 = boto3.client("s3")
