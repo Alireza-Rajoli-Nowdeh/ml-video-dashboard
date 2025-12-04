@@ -80,3 +80,9 @@ python src/dashboard.py
 ```
 
 This will open a shareable Gradio app link.
+
+<img width="1281" height="402" alt="image" src="https://github.com/user-attachments/assets/d445e332-16f2-4517-a857-b652c3cc2b8c" />
+
+<img width="1265" height="382" alt="image" src="https://github.com/user-attachments/assets/2a881be1-9a77-4b7b-b7f9-5a9d8b5190d4" />
+
+
