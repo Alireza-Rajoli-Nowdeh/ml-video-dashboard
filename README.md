@@ -62,6 +62,9 @@ Step 1 — Transcribe videos
 ```bash
 python src/transcribe_videos.py
 ```
+<img width="836" height="244" alt="image" src="https://github.com/user-attachments/assets/63b7e371-3f7d-4dbd-b07e-4eb659b46a1f" />
+
+
 Step 2 — Normalize text
 ```bash
 python src/normalize_transcriptions.py
