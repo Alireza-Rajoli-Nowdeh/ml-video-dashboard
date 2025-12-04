@@ -10,7 +10,7 @@ import json
 # S3 configuration
 s3 = boto3.client("s3")
 SOURCE_BUCKET = "aws-tc-largeobjects"
-DEST_BUCKET = "alireza-rajoli-nowdeh-project"
+DEST_BUCKET = "YOUR_S3_BUCKET_NAME"
 
 INPUT_PREFIX = "CUR-TF-200-ACMNLP-1/video/"
 AUDIO_PREFIX = "output/audio/"
