@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 
 s3 = boto3.client("s3")
-BUCKET = "alireza-rajoli-nowdeh-project"
+BUCKET = "YOUR_S3_BUCKET_NAME"
 
 NORM_PREFIX = "output/normalized_transcriptions/"
 KP_PREFIX = "output/key_phrases_and_topics/"
