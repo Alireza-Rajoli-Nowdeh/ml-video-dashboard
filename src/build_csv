@@ -1,1 +1,37 @@
+import os
+import json
+import boto3
+import pandas as pd
+import tempfile
+
+s3 = boto3.client("s3")
+BUCKET = "alireza-rajoli-nowdeh-project"
+
+PREFIX = "output/key_phrases_and_topics/"
+
+def list_files():
+    response = s3.list_objects_v2(Bucket=BUCKET, Prefix=PREFIX)
+    return [obj["Key"] for obj in response.get("Contents", [])]
+
+files = list_files()
+
+rows = []
+for key in files:
+    obj = s3.get_object(Bucket=BUCKET, Key=key)
+    data = json.loads(obj["Body"].read().decode("utf-8"))
+
+    rows.append({
+        "Video Name": os.path.basename(key).replace(".json",""),
+        "Key Phrases": ", ".join(data.get("Key Phrases", [])),
+        "Topics": ", ".join(data.get("Topics", []))
+    })
+
+df = pd.DataFrame(rows)
+
+csv_path = tempfile.mktemp(suffix=".csv")
+df.to_csv(csv_path, index=False)
+
+s3.upload_file(csv_path, BUCKET, "output/key_phrases_and_topics.csv")
+
+print("CSV uploaded to S3.")
 
