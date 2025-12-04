@@ -5,7 +5,7 @@ import pandas as pd
 import tempfile
 
 s3 = boto3.client("s3")
-BUCKET = "alireza-rajoli-nowdeh-project"
+BUCKET = "YOUR_S3_BUCKET_NAME"
 
 PREFIX = "output/key_phrases_and_topics/"
 
